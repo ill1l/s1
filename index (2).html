@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>النظام</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="top">
+    <div class="brand"><div class="mono">ن</div><div><div class="hi" id="hi"></div><h1>النظام</h1><div class="date" id="date"></div></div></div>
+    <div style="display:flex;gap:8px"><button class="navb" id="hb" type="button">السجل</button><button class="theme" id="xb" type="button" aria-label="الممنوعات">❌</button><button class="theme" id="theme" type="button" aria-label="تبديل المظهر">◐</button></div>
+  </div>
+  <div id="home">
+  <p class="quote" id="quote"></p>
+
+  <section class="hero">
+    <div class="ring">
+      <svg width="96" height="96" viewBox="0 0 96 96"><circle cx="48" cy="48" r="42" fill="none" stroke="var(--line)" stroke-width="4"/><circle id="arc" cx="48" cy="48" r="42" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9" style="transition:stroke-dashoffset .5s"/></svg>
+      <b id="pct">0%</b>
+    </div>
+    <div><p class="big" id="msg"></p><p class="sub" id="count"></p><p class="sub" id="left"></p></div>
+  </section>
+
+  <div class="strip"><div class="mc"><b id="s1">0</b><span>أيام متتالية</span></div><div class="mc"><b id="s2">0</b><span>جلسات تركيز</span></div><div class="mc"><b id="s3">0</b><span>منجزة اليوم</span></div></div>
+
+  <button class="goto" id="gtn" type="button"><span>مهامي<small id="gnx"></small></span><b id="gtc"></b></button>
+
+  <div class="week" id="week"></div>
+
+  <section class="focus">
+    <div><div class="fd" id="fd"><button type="button" class="chip" data-m="15">15</button><button type="button" class="chip on" data-m="25">25</button><button type="button" class="chip" data-m="45">45</button><span class="sub">دقيقة</span></div><div class="tm" id="tm">25:00</div><div class="bar"><i id="fbar" style="background:var(--gold)"></i></div><div class="sub" id="fc"></div></div>
+    <div class="fb"><button class="tog" id="fs" type="button">ابدأ</button><button class="tog" id="fr" type="button">إعادة</button></div>
+  </section>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  <div class="streak" id="streak"></div>
+  <div class="streak" id="sv" style="margin-top:6px"></div>
+  </div>
+
+  <div id="tasks" hidden>
+    <button class="tog" id="tb" type="button">← رجوع للرئيسية</button>
+    <div class="strip"><div class="mc"><b id="ts1">0</b><span>متبقية</span></div><div class="mc"><b id="ts2">0</b><span>منجزة</span></div><div class="mc"><b id="ts3">0</b><span>متأخرة</span></div></div>
+    <div class="bar" style="margin:0 0 16px"><i id="tbar" style="background:var(--gold)"></i></div>
+    <div class="wo" id="wo" hidden><button class="chk" id="woc" type="button" aria-label="إنجاز التمرين"></button><div class="body"><div class="txt">💪 تمرين اليوم</div><div class="meta">إجباري</div></div><span class="yyb"></span></div>
+    <form id="f">
+    <div class="r1">
+      <input type="text" id="in" placeholder="ما المهمة؟" autocomplete="off" aria-label="المهمة">
+      <button class="add" type="submit">إضافة</button>
+    </div>
+    <div class="r2">
+      <div id="cats" class="cats"></div><select id="cat" hidden aria-label="التصنيف"><option>شخصي</option><option>دراسة</option><option>رياضة</option><option>عمل</option><option>صحة</option></select>
+      <input type="time" id="time" aria-label="الوقت">
+      <button type="button" class="tog" id="pri">عاجلة</button>
+      <button type="button" class="tog on" id="rep">🔁 تتكرر يومياً</button>
+    </div>
+  </form>
+    <div class="lh"><h2>قائمة اليوم</h2><span id="lr"></span></div>
+  <input type="text" id="sq" placeholder="ابحث في المهام" autocomplete="off" aria-label="بحث في المهام" style="width:100%;margin:8px 0 4px">
+  <div class="filters" id="filters"></div>
+  <ul id="list"></ul>
+  </div>
+
+  <div id="ban" hidden>
+    <button class="tog" id="bb" type="button">← رجوع للرئيسية</button>
+    <div class="lh"><h2>❌</h2><span id="bn"></span></div>
+    <form id="bf">
+      <div class="r1"><input type="text" id="bi" placeholder="مثال: تيك توك" autocomplete="off" aria-label="أمر ممنوع"><button class="add" type="submit">إضافة</button></div>
+    </form>
+    <ul id="blist"></ul>
+  </div>
+
+  <div id="hist" hidden>
+    <button class="tog" id="back" type="button">← رجوع للرئيسية</button>
+    
+    <section class="stats">
+      <h3 style="margin:0 0 12px">الأيام المكتملة</h3>
+      <div class="cm"><button id="nx2" type="button" aria-label="الشهر التالي">›</button><h3 id="mt2"></h3><button id="pv2" type="button" aria-label="الشهر السابق">‹</button></div>
+      <div class="sub" id="cnt2" style="margin:10px 0 0;text-align:center"></div>
+      <div class="bar"><i id="gb"></i></div>
+      <button class="tog" id="gset" type="button">تغيير الهدف الشهري</button>
+      <button class="tog" id="gt" type="button">الشهر الحالي</button>
+      <div class="cal" id="cal2"></div>
+    </section>
+    <section class="stats">
+      <h3>سجل الأيام المكتملة</h3>
+      <div class="sg" id="st"></div>
+      <div class="sub">آخر 30 يوماً</div>
+      <div class="spark" id="sp"></div>
+      <div class="sub">الأوسمة: سلسلة أيام متتالية مكتملة</div>
+      <div class="badges" id="bd"></div>
+      <div class="sub">كل الأيام المسجلة، الأحدث أولاً</div>
+      <table id="lg"></table>
+      <button class="tog" id="lm" type="button" style="margin-top:10px" hidden>عرض الكل</button>
+    </section>
+    <section class="stats">
+      <h3>نسخة احتياطية</h3>
+      <div class="sub" style="margin-top:0">انسخ بياناتك واحفظها في ملاحظاتك، ثم الصقها هنا لاستعادتها على أي جهاز أو متصفح.</div>
+      <textarea id="bk" rows="4" aria-label="بيانات النسخة الاحتياطية"></textarea>
+      <div class="r2"><button class="tog" id="bc" type="button">نسخ بياناتي</button><button class="tog" id="br" type="button">استعادة من النص</button><span class="sub" id="bs"></span></div>
+      <div class="sub" style="margin-top:16px">نسخ تلقائية من آخر 7 أيام (اضغط مرتين للاستعادة)</div>
+      <div class="filters" id="snaps"></div>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="ts" hidden><span>حُذفت المهمة</span><button id="tu" type="button">تراجع</button></div>
+<div class="win" id="ask"><div><h2>⏱ مؤقت</h2><p id="ap"></p><button class="add" style="padding:12px 28px;margin:0 5px" id="ay" type="button">نعم</button><button class="tog" style="padding:12px 28px;margin:0 5px" id="an" type="button">لا</button></div></div>
+<div class="win" id="win"><div><h2 id="wh">يوم مكتمل</h2><p id="wmsg"></p><button class="add" style="padding:12px 30px" id="wclose" type="button">تمام</button></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
